@@ -56,6 +56,7 @@ button.primary {
 }
 button.primary:hover { transform: translateY(-2px); }
 .lvl-grid { display: grid; grid-template-columns: repeat(5, 54px); gap: 8px; }
+@media (max-width: 480px) { .lvl-grid { grid-template-columns: repeat(4, 54px); } }
 .lvl {
   aspect-ratio: 1; border-radius: 10px;
   background: #f0f4f0; border: 1px solid rgba(0,0,0,0.08);

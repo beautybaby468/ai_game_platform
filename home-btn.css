@@ -1,21 +1,33 @@
+/* 返回大厅按钮：悬浮在游戏卡片左上角 */
+.card {
+  position: relative;   /* 作为按钮的定位基准 */
+}
 .back-home {
-  position: fixed;
-  bottom: 16px;
-  right: 16px;
+  position: absolute;
+  top: -12px;
+  left: -12px;
   z-index: 999;
-  background: rgba(255,255,255,0.92);
-  color: #2d3a33;
-  border: 1px solid rgba(0,0,0,0.12);
+  background: linear-gradient(90deg, #27ae60, #6fdc8c);
+  color: #fff;
+  border: 2px solid #fff;
   border-radius: 999px;
-  padding: 8px 18px;
+  padding: 7px 16px;
   font-size: 13px;
   font-weight: 700;
   text-decoration: none;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
-  font-family: "Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
-  transition: transform .1s, background .2s;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  transition: transform 0.1s;
+  white-space: nowrap;
 }
 .back-home:hover {
-  transform: translateY(-2px);
-  background: #ffffff;
+  transform: scale(1.06);
+}
+@media (max-width: 640px) {
+  .back-home {
+    top: -10px;
+    left: -8px;
+    padding: 6px 13px;
+    font-size: 12px;
+  }
 }
