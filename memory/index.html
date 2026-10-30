@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>记忆翻牌 · 20 关</title>
+<link rel="stylesheet" href="style.css?v=2">
+<link rel="stylesheet" href="../home-btn.css">
+</head>
+<body>
+<div class="app">
+  <div class="card">
+    <div class="topbar">
+      <div class="title">🃏 记忆翻牌</div>
+      <div class="stats">
+        <span>关卡 <b id="level">1</b></span>
+        <span>步数 <b id="moves">0</b></span>
+        <span>配对 <b id="pairs">0/6</b></span>
+        <span>⏱ <b id="timer">0</b>s</span>
+      </div>
+    </div>
+    <div class="tierinfo" id="tierInfo"></div>
+    <div class="board-wrap">
+      <div class="board" id="board"></div>
+      <div class="overlay" id="overlay"></div>
+    </div>
+    <div class="hint">
+      <button class="btn-sec" id="selectBtn">选关</button>
+      <button class="btn-sec" id="restartBtn">重玩本关</button>
+      <span>翻出两张同对图案即配对成功</span>
+    </div>
+  </div>
+</div>
+<a class="back-home" href="../index.html">🏠 返回大厅</a>
+<script src="game.js?v=2"></script>
+</body>
+</html>

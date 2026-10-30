@@ -1,0 +1,10 @@
+# 工作区配置（不上传）
+.workbuddy/
+
+# 临时/调试文件
+served_check*.js
+*.log
+
+# 系统文件
+Thumbs.db
+.DS_Store

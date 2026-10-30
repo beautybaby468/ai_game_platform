@@ -1,0 +1,21 @@
+.back-home {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 999;
+  background: rgba(255,255,255,0.92);
+  color: #2d3a33;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 999px;
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+  font-family: "Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  transition: transform .1s, background .2s;
+}
+.back-home:hover {
+  transform: translateY(-2px);
+  background: #ffffff;
+}

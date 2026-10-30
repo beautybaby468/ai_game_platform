@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>打砖块 · 20 关</title>
+<link rel="stylesheet" href="style.css?v=2">
+<link rel="stylesheet" href="../home-btn.css?v=2">
+</head>
+<body>
+<div class="app">
+  <div class="card">
+    <div class="topbar">
+      <div class="title">🧱 打砖块</div>
+      <div class="scores">
+        <span>分数 <b id="score">0</b></span>
+        <span>关卡 <b id="level">1</b></span>
+        <span class="gold">❤ <b id="lives">3</b></span>
+      </div>
+    </div>
+    <div class="canvas-wrap">
+      <canvas id="board" width="420" height="560"></canvas>
+      <div class="toast" id="toast"></div>
+      <div class="overlay" id="overlay"></div>
+    </div>
+    <div class="hint">
+      <button class="btn-sec" id="pauseBtn">暂停</button>
+      <button class="btn-sec" id="selectBtn">选关</button>
+      <button class="btn-sec" id="restartBtn">重玩本关</button>
+      <span>鼠标/方向键移动 · 空格发射 · 打穿所有砖行即通关</span>
+    </div>
+  </div>
+</div>
+<a class="back-home" href="../index.html">🏠 返回大厅</a>
+<script src="game.js?v=2"></script>
+</body>
+</html>

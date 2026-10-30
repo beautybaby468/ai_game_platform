@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>扫雷</title>
+<link rel="stylesheet" href="style.css?v=2">
+<link rel="stylesheet" href="../home-btn.css?v=2">
+</head>
+<body>
+<div class="app">
+  <div class="card">
+    <div class="topbar">
+      <div class="title">💣 扫雷</div>
+      <div class="diff">
+        <button class="diff-btn on" data-d="easy">初级</button>
+        <button class="diff-btn" data-d="medium">中级</button>
+        <button class="diff-btn" data-d="hard">高级</button>
+        <button class="diff-btn" data-d="custom">自定义</button>
+      </div>
+    </div>
+
+    <div class="custom-panel hidden" id="customPanel">
+      行 <input type="number" id="cRows" min="5" max="24" value="12">
+      列 <input type="number" id="cCols" min="5" max="40" value="16">
+      雷 <input type="number" id="cMines" min="1" value="30">
+      <button class="primary sm" id="customApply">开始</button>
+      <span class="tip">行 5-24 · 列 5-40 · 雷数 ≤ 格子数 35%</span>
+    </div>
+
+    <div class="hud">
+      <div class="hud-box">💣 <b id="mineLeft">10</b></div>
+      <button id="faceBtn">🙂</button>
+      <div class="hud-box">⏱ <b id="timer">0</b>s</div>
+      <div class="hud-box gold">🏆 <b id="score">0</b></div>
+    </div>
+
+    <div class="board-scroll">
+      <div class="board" id="board"></div>
+    </div>
+
+    <div class="overlay hidden" id="overlay">
+      <h2 id="ovTitle"></h2>
+      <p id="ovText"></p>
+      <div class="pin" id="ovBtns"></div>
+    </div>
+
+    <div class="hint">
+      <span>左键翻开 · 右键插旗 · 点数字快速排查 · 自定义模式不计入纪录</span>
+      <span id="bestInfo"></span>
+    </div>
+  </div>
+</div>
+<script src="game.js?v=2"></script>
+<a class="back-home" href="../index.html">🏠 返回大厅</a>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>五子棋</title>
+<link rel="stylesheet" href="style.css?v=2">
+<link rel="stylesheet" href="../home-btn.css?v=2">
+</head>
+<body>
+<div class="app">
+  <div class="card">
+    <div class="topbar">
+      <div class="title">⚫ 五子棋</div>
+      <div class="modes">
+        <button class="mode-btn on" data-m="pve">人机对战</button>
+      </div>
+    </div>
+    <div class="status" id="status">你执黑先行 · 点击棋盘落子</div>
+    <div class="canvas-wrap">
+      <canvas id="board" width="494" height="494"></canvas>
+      <div class="overlay hidden" id="overlay">
+        <h2 id="ovTitle"></h2>
+        <p id="ovText"></p>
+        <div class="pin" id="ovBtns"></div>
+      </div>
+    </div>
+    <div class="hint">
+      <button class="btn-sec" id="undoBtn">悔棋</button>
+      <button class="btn-sec" id="restartBtn">重新开始</button>
+      <span id="record">人机战绩：0胜 0负</span>
+    </div>
+  </div>
+</div>
+<script src="game.js?v=2"></script>
+<a class="back-home" href="../index.html">🏠 返回大厅</a>
+</body>
+</html>

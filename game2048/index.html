@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2048</title>
+<link rel="stylesheet" href="style.css?v=2">
+<link rel="stylesheet" href="../home-btn.css?v=2">
+</head>
+<body>
+<div class="app">
+  <div class="card">
+    <div class="top">
+      <h1>2048</h1>
+      <div class="scores">
+        <div class="score-box"><div class="label">分数</div><div class="val" id="score">0</div></div>
+        <div class="score-box"><div class="label">最高</div><div class="val" id="best">0</div></div>
+      </div>
+    </div>
+    <div class="sub">方向键 / WASD / 滑动屏幕 · 相同数字合并</div>
+
+    <div class="board-wrap">
+      <div class="board" id="board"></div>
+      <div class="overlay hidden" id="overlay">
+        <h2 id="ovTitle"></h2>
+        <p id="ovText"></p>
+        <div class="pin" id="ovBtns"></div>
+      </div>
+    </div>
+
+    <div class="hint">
+      <button id="newBtn">新游戏</button>
+      <button class="btn-sec" id="undoBtn">撤销 ×<span id="undoLeft">3</span></button>
+      <span>合成 2048 / 4096 / 8192 达成里程碑 · 撤销限 3 次（快捷键 Z）</span>
+    </div>
+  </div>
+</div>
+<script src="game.js?v=2"></script>
+<a class="back-home" href="../index.html">🏠 返回大厅</a>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>数独</title>
+<link rel="stylesheet" href="style.css?v=2">
+<link rel="stylesheet" href="../home-btn.css?v=2">
+</head>
+<body>
+<div class="app">
+  <div class="card">
+    <div class="topbar">
+      <div class="title">🧮 数独</div>
+      <div class="diff">
+        <button class="diff-btn on" data-d="easy">简单</button>
+        <button class="diff-btn" data-d="normal">普通</button>
+        <button class="diff-btn" data-d="hard">困难</button>
+      </div>
+    </div>
+    <div class="hud">
+      <span>⏱ <b id="timer">0</b>s</span>
+      <span>剩余空格 <b id="remain">0</b></span>
+      <span id="bestInfo"></span>
+    </div>
+    <div class="sudoku" id="sudoku"></div>
+    <div class="pad">
+      <button class="num-btn" data-n="1">1</button>
+      <button class="num-btn" data-n="2">2</button>
+      <button class="num-btn" data-n="3">3</button>
+      <button class="num-btn" data-n="4">4</button>
+      <button class="num-btn" data-n="5">5</button>
+      <button class="num-btn" data-n="6">6</button>
+      <button class="num-btn" data-n="7">7</button>
+      <button class="num-btn" data-n="8">8</button>
+      <button class="num-btn" data-n="9">9</button>
+      <button class="num-btn clear" data-n="0">✕</button>
+    </div>
+    <div class="hint">
+      <button class="btn-sec" id="hintBtn">💡 提示</button>
+      <button class="btn-sec" id="newBtn">新一局</button>
+      <span>点击格子填数 · 键盘 1-9 也可输入</span>
+    </div>
+    <div class="overlay hidden" id="overlay">
+      <h2 id="ovTitle"></h2>
+      <p id="ovText"></p>
+      <div class="pin" id="ovBtns"></div>
+    </div>
+  </div>
+</div>
+<script src="game.js?v=2"></script>
+<a class="back-home" href="../index.html">🏠 返回大厅</a>
+</body>
+</html>
