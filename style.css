@@ -28,17 +28,17 @@ h1 {
 }
 .sub { font-size: 13px; color: var(--muted); margin-bottom: 22px; }
 
-.games { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 14px; }
+.games { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(160px, 100%), 1fr)); gap: 14px; }
 
 /* 手机：加大卡片与触控目标 */
 @media (max-width: 560px) {
   .card { padding: 22px 14px; }
-  .games { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-  .game-card { padding: 26px 8px 20px; }
+  .games { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .game-card { min-width: 0; padding: 24px 6px 18px; }
   .game-card .ico { font-size: 54px; }
   .game-card .nm { font-size: 19px; }
   .game-card .ds { font-size: 12px; }
-  .game-card .stat { font-size: 11px; }
+  .game-card .stat { font-size: 10px; padding: 2px 8px; min-width: 0; }
   .game-card .play { font-size: 14px; padding: 10px 24px; }
 }
 /* 平板/大屏：4 列铺满 */
