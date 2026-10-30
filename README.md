@@ -21,19 +21,16 @@ Flappy 小鸟：扇翅穿管，缝隙随分数收窄
 
 ## 本地运行
 
-方式一（推荐，自带禁缓存服务器）：
+方式一（部署到本地打开）：
 
 ```bash
 python serve.py
 # 浏览器打开 http://127.0.0.1:8803
 ```
 
-方式二（任意静态服务器）：
+方式二（点击链接）：
 
-```bash
-python -m http.server 8080
-# 浏览器打开 http://127.0.0.1:8080
-```
+(https://beautybaby468.github.io/ai_game_platform/)
 
 方式三：直接双击 `index.html` 也能玩（所有资源相对路径引用）。
 
