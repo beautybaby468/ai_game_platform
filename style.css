@@ -9,11 +9,13 @@ body {
   background: linear-gradient(135deg, #eaf7e6 0%, #e3f2fd 50%, #fff9e6 100%);
   color: var(--text);
   min-height: 100vh;
-  display: flex; align-items: center; justify-content: center;
+  display: flex; align-items: flex-start; justify-content: center;
   padding: 20px;
 }
 .card {
-  width: min(94vw, 760px);
+  width: min(94vw, 900px);
+  max-width: 100%;
+  margin: auto;                 /* 内容超高时自动留边，不会把顶部推出视口 */
   background: var(--panel);
   border-radius: 20px;
   padding: 28px 24px;
@@ -28,28 +30,33 @@ h1 {
 }
 .sub { font-size: 13px; color: var(--muted); margin-bottom: 22px; }
 
-.games { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(160px, 100%), 1fr)); gap: 14px; }
+/* 列数完全由容器宽度决定（auto-fill），不硬编码，任何屏幕都不会撑破 */
+.games {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(160px, 100%), 1fr));
+  gap: 14px;
+}
 
 /* 手机：加大卡片与触控目标 */
 @media (max-width: 560px) {
   .card { padding: 22px 14px; }
   .games { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-  .game-card { min-width: 0; padding: 24px 6px 18px; }
+  .game-card { padding: 24px 6px 18px; }
   .game-card .ico { font-size: 54px; }
   .game-card .nm { font-size: 19px; }
   .game-card .ds { font-size: 12px; }
-  .game-card .stat { font-size: 10px; padding: 2px 8px; min-width: 0; }
+  .game-card .stat { font-size: 10px; padding: 2px 8px; }
   .game-card .play { font-size: 14px; padding: 10px 24px; }
 }
-/* 平板/大屏：4 列铺满 */
+/* 大屏：仅放大字号，列数仍交给 auto-fill */
 @media (min-width: 900px) {
-  .games { grid-template-columns: repeat(4, 1fr); }
   .game-card .ico { font-size: 46px; }
   .game-card .nm { font-size: 18px; }
 }
 
 .game-card {
   display: flex; flex-direction: column; align-items: center; gap: 5px;
+  min-width: 0;                 /* 允许被网格列压缩，长纪录文本才能省略 */
   border-radius: 16px;
   padding: 22px 10px 18px;
   text-decoration: none;
@@ -67,12 +74,13 @@ h1 {
   box-shadow: 0 12px 30px rgba(60,120,80,0.22);
 }
 .game-card .ico { font-size: 40px; }
-.game-card .nm { font-size: 17px; font-weight: 800; }
-.game-card .ds { font-size: 11px; color: var(--muted); }
+.game-card .nm { font-size: 17px; font-weight: 800; max-width: 100%; }
+.game-card .ds { font-size: 11px; color: var(--muted); max-width: 100%; overflow-wrap: anywhere; }
 .game-card .stat {
   font-size: 10.5px; color: #b8860b; background: rgba(255,246,222,0.9);
   border-radius: 999px; padding: 2px 10px; margin-top: 5px;
-  max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  min-width: 0; max-width: 100%;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
 }
 .game-card .play {
   margin-top: 9px; font-size: 12px; font-weight: 700; color: #fff;

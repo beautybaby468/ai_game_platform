@@ -1,0 +1,7 @@
+critic_mode_hint: once
+force_mode: null
+rubrics_files:
+  - "src/experts/general-writer/references/quality-framework.md"
+pass_score: 75
+max_loops: 2
+critic_decision_by_doc_writer: "skip（genre=general 属低风险分档，用户未要求严格审查）"
